@@ -1,0 +1,403 @@
+* {
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+  scroll-behavior: smooth;
+  
+}
+
+.fa-virus {
+  animation: fall 30s linear forwards;
+  color: red;
+  position: absolute;
+  top: -20px;
+  z-index: 999;
+}
+#total_vn{
+  font-size: 25px;
+  font-weight: 900;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+#covid_data_table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#covid_data_table_hcm {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#covid_data_table_hcm_vacxin {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#covid_data_table_hcm_sub {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#covid_data_table_hcm_sub_vacxin {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#author {
+  
+  font-size: 12px;
+  font-weight: 900;
+  font-style: italic;
+}
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid rgba(250, 186, 167, 0.684);
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
+}
+
+
+
+#myInput:focus {
+  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  outline: none;
+}
+
+#myInputHCMSubVac {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid rgba(250, 186, 167, 0.684);
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
+}
+
+
+
+#myInputHCMSubVac:focus {
+  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  outline: none;
+}
+
+#myInputHCM {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid rgba(250, 186, 167, 0.684);
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
+}
+
+#myInputHCM:focus {
+  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  outline: none;
+}
+
+#myInputHCMSub {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid rgba(250, 186, 167, 0.684);
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
+  
+}
+
+#myInputHCMSub:focus {
+  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  outline: none;
+}
+#covid_data_table td,
+#covid_data_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#covid_data_table_hcm td,
+#covid_data_table_hcm th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#covid_data_table_hcm_sub td,
+#covid_data_table_hcm_sub th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#covid_data_table_hcm_sub_vacxin td,
+#covid_data_table_hcm_sub_vacxin th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#covid_data_table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#covid_data_table_hcm tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#covid_data_table_hcm_sub tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#covid_data_table_hcm_sub_vacxin tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#covid_data_table tr:hover {
+  background-color: #ddd;
+}
+#covid_data_table_hcm tr:hover {
+  background-color: #ddd;
+}
+
+#covid_data_table_hcm_sub tr:hover {
+  background-color: #ddd;
+}
+#covid_data_table_hcm_sub_vacxin tr:hover {
+  background-color: #ddd;
+}
+
+
+#covid_data_table th {
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+#covid_data_table_hcm th {
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+#covid_data_table_hcm_sub th {
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+#covid_data_table_hcm_sub_vacxin th {
+  cursor: pointer;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+#total_effect {
+  display: inline-block;
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+  background-color: #fff;
+  font-weight: 900;
+  line-height: 2.5;
+  font-style: italic;
+  width: 100%;
+}
+#total_first_injection{
+  display: inline-block;
+  padding: 10px;
+  font-size: 18px;
+  color: green;
+  background-color: #fff;
+  font-weight: 900;
+  line-height: 2.5;
+  font-style: italic;
+  width: 100%;
+}
+#total_done_injection{
+  display: inline-block;
+  padding: 10px;
+  font-size: 18px;
+  color: green;
+  background-color: #fff;
+  font-weight: 900;
+  line-height: 2.5;
+  font-style: italic;
+  width: 100%;
+}
+#new_effect {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+  background-color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 2.5;
+  width: 100%;
+}
+
+#total_death{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  color: black;
+  background-color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 2.5;
+  width: 100%;
+}
+
+#total_effect_hcm {
+  display: inline-block;
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+  background-color: #fff;
+  font-weight: 900;
+  line-height: 2.5;
+  font-style: italic;
+  width: 100%;
+}
+
+#new_effect_hcm {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
+  color: red;
+  background-color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 2.5;
+  width: 100%;
+}
+
+.audio_container {
+  position: relative;
+  width: 100%;
+  background: #f1f3f4;
+}
+
+.audio_container audio {
+  width: 100%;
+  outline: none;
+}
+.song_title {
+  color: #fff;
+  background: #04aa6d;
+  padding: 5px;
+}
+
+@-moz-keyframes my-sparkle {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: rotate(360deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: rotate(720deg) scale(0);
+  }
+}
+
+@-webkit-keyframes my-sparkle {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(720deg) scale(0);
+  }
+}
+
+@keyframes my-sparkle {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(720deg) scale(0);
+  }
+}
+
+#special {
+  padding: 10px;
+  color: red;
+  display: inline-block;
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+}
+#special_title {
+  color: red;
+}
+
+#injectionProgress {
+  padding: 10px;
+  color: red;
+  display: block;
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+}
+#vacxin_title {
+  color: red;
+}
+
+#click_me_hcm{
+  color: red;
+  display: inline-block;
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
