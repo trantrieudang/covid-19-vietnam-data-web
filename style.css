@@ -293,6 +293,18 @@
   font-style: italic;
   width: 100%;
 }
+
+#total_treating{
+  display: inline-block;
+  padding: 10px;
+  font-size: 18px;
+  color: #ff671f;
+  background-color: #fff;
+  font-weight: 900;
+  line-height: 2.5;
+  font-style: italic;
+  width: 100%;
+}
 #total_first_injection{
   display: inline-block;
   padding: 10px;

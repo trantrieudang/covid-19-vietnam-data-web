@@ -351,7 +351,8 @@ fetch("https://emag.thanhnien.vn/covid19/home/getSummPatient", options1)
       console.log(data);
       let sumAcc = 0,
         deathAcc = 0,
-        recoverAcc = 0;
+        recoverAcc = 0,
+        treatingAcc = 0;
       sumAcc = data.Confirmed;
       document.getElementById("total_effect_num").innerHTML = sumAcc
         .toString()
@@ -364,6 +365,10 @@ fetch("https://emag.thanhnien.vn/covid19/home/getSummPatient", options1)
 
       recoverAcc = data.Recovered;
       document.getElementById("total_recovered_num").innerHTML = recoverAcc
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      treatingAcc = sumAcc - deathAcc - recoverAcc;
+      document.getElementById("total_treating_num").innerHTML = treatingAcc
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
