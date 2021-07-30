@@ -237,7 +237,7 @@ fetch(
       // console.log(dataArr.length);
 
       let ctx = document.getElementById("myChart");
-      ctx.height = 180;
+      ctx.height = 200;
       let myChart = new Chart(ctx, {
         plugins: [ChartDataLabels],
         type: "bar",

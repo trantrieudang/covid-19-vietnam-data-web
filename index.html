@@ -20,7 +20,7 @@
 <body>
     
     <h1 id="author" >Created by Trần Triều Dâng</h1>
-    <h1 id="total_vn">Số liệu covid Việt Nam trong năm 2021</h1>
+    <h1 id="total_vn">Số liệu covid Việt Nam </h1>
     <div class="audio_container">
         <div class="song_title" id="song_title"><i class="fas fa-music"></i> ...Ghen Cô Vy... <i class="fas fa-music"></i></div>
         <audio  controls class="song" id="song" autoplay="true" loop="true" src="assets/music/song2.mp3"></audio>
@@ -72,7 +72,7 @@
             <tbody id="covid_data_body"></tbody> 
     </table>
     <br/>
-    <h2>Thống kê cả nước theo ngày</h2>
+    <h2 id="covid_by_day">Thống kê cả nước theo ngày</h2>
     <br/>
     <select id="myInputSubAll" oninput="myInputSubAll()"><option>All</option></select>
     <div class="data_detail_all">
@@ -93,9 +93,11 @@
         </table>
     </div>
     <br/>
+    <h2 class="vacxin_title" id="vacxin_title">Kết quả tiêm chủng</h2>
+    <br/>
     <input type="text" id="myInputHCMSubVac" onkeyup="myFunctionHCMSubVac()" placeholder="Tìm kiếm theo tên thành phố/tỉnh..." title="Type in a city/province">
     <div class="vacxin">
-        <h2 class="vacxin_title">Kết quả tiêm chủng</h2>
+        
         <table id="covid_data_table_hcm_sub_vacxin">
             <thead>
                 <tr id="covid_data_head_hcm_sub_vacxin">
