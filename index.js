@@ -298,14 +298,14 @@ fetch(
         },
       });
       const newArrDesc = arr.sort((a, b) => new Date(b[10]) - new Date(a[10]));
-
+      console.log(newArrDesc);
       for (let i = 0; i < newArrDesc.length; i++) {
-        const options = { month: "long", day: "numeric" };
+        const options = { month: "long", day: "numeric", year: "numeric" };
         const selectChosen = `
             
             <option>
                 ${new Date(newArrDesc[i][10]).toLocaleDateString(
-                  "vi-VN",
+                  "en-US",
                   options
                 )}
             </option>
@@ -315,16 +315,16 @@ fetch(
       }
 
       for (let i = 0; i < newArrDesc.length; i++) {
-        const options = { month: "long", day: "numeric" };
+        const options = { month: "long", day: "numeric", year: "numeric" };
         const y = `
             <tr>
-            <td id="data_1_time">
+            <td >
                 ${new Date(newArrDesc[i][10]).toLocaleDateString(
-                  "vi-VN",
+                  "en-US",
                   options
                 )}
             </td>
-            <td id="data_2"> 
+            <td > 
                 ${newArrDesc[i][22]
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
@@ -341,6 +341,7 @@ const options1 = {
   method: "POST",
   body: JSON.stringify(),
 };
+
 fetch("https://emag.thanhnien.vn/covid19/home/getSummPatient", options1)
   .then((response) => response.json())
   .then((item) => {
@@ -349,7 +350,8 @@ fetch("https://emag.thanhnien.vn/covid19/home/getSummPatient", options1)
       const { data } = item;
       console.log(data);
       let sumAcc = 0,
-        deathAcc = 0;
+        deathAcc = 0,
+        recoverAcc = 0;
       sumAcc = data.Confirmed;
       document.getElementById("total_effect_num").innerHTML = sumAcc
         .toString()
@@ -359,6 +361,71 @@ fetch("https://emag.thanhnien.vn/covid19/home/getSummPatient", options1)
       document.getElementById("death_num").innerHTML = deathAcc
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+      recoverAcc = data.Recovered;
+      document.getElementById("total_recovered_num").innerHTML = recoverAcc
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  })
+  .catch((err) => console.log(err));
+
+const options2 = {
+  method: "POST",
+  body: JSON.stringify(),
+};
+
+fetch("https://emag.thanhnien.vn/covid19/home/GetChartCovid", options2)
+  .then((response) => response.json())
+  .then((item) => {
+    if (item != null || item != undefined) {
+      console.log(item);
+      const { list } = item;
+      console.log(list);
+      let arr = list.map((obj) => Object.values(obj));
+      console.log(arr);
+      const newArrDesc = arr.sort((a, b) => new Date(b[0]) - new Date(a[0]));
+      console.log(newArrDesc);
+      for (let i = 0; i < newArrDesc.length; i++) {
+        const options = { month: "long", day: "numeric", year: "numeric" };
+        const selectChosen = `
+            
+            <option>
+                ${new Date(newArrDesc[i][0]).toLocaleDateString(
+                  "en-US",
+                  options
+                )}
+            </option>
+            
+        `;
+        document.getElementById("myInputSubAll").innerHTML += selectChosen;
+      }
+
+      for (let i = 0; i < newArrDesc.length; i++) {
+        const options = { month: "long", day: "numeric", year: "numeric" };
+        const y = `
+            <tr>
+            <td >
+                ${new Date(newArrDesc[i][0]).toLocaleDateString(
+                  "en-US",
+                  options
+                )}
+            </td>
+            <td > 
+                ${newArrDesc[i][2]
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </td>
+            <td > 
+            ${newArrDesc[i][3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td > 
+        ${newArrDesc[i][4].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+    </td>
+            </tr>
+        `;
+        document.getElementById("covid_data_body_all").innerHTML += y;
+      }
     }
   })
   .catch((err) => console.log(err));
@@ -406,6 +473,32 @@ function myFunctionHCMSub() {
   let dropdown, table, rows, cells, dateChosen, filter;
   dropdown = document.getElementById("myInputHCMSub");
   table = document.getElementById("covid_data_table_hcm_sub");
+  rows = table.getElementsByTagName("tr");
+  filter = dropdown.value;
+
+  // Loops through rows and hides those with countries that don't match the filter
+  for (let row of rows) {
+    // `for...of` loops through the NodeList
+    cells = row.getElementsByTagName("td");
+    dateChosen = cells[0] || null; // gets the 2nd `td` or nothing
+    // if the filter is set to 'All', or this is the header row, or 2nd `td` text matches filter
+    if (
+      filter == "All" ||
+      !dateChosen ||
+      dateChosen.textContent.indexOf(filter) > -1
+    ) {
+      row.style.display = ""; // shows this row
+    } else {
+      row.style.display = "none"; // hides this row
+    }
+  }
+}
+
+function myInputSubAll() {
+  // Variables
+  let dropdown, table, rows, cells, dateChosen, filter;
+  dropdown = document.getElementById("myInputSubAll");
+  table = document.getElementById("covid_data_table_all");
   rows = table.getElementsByTagName("tr");
   filter = dropdown.value;
 
@@ -956,6 +1049,201 @@ function sortTableNumHCMSub(n) {
           Number(x.innerHTML.replace(",", "")) <
           Number(y.innerHTML.replace(",", ""))
         ) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount++;
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumAll(n) {
+  var table,
+    rows,
+    switching,
+    i,
+    x,
+    y,
+    shouldSwitch,
+    dir,
+    switchcount = 0;
+  table = document.getElementById("covid_data_table_all");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc";
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < rows.length - 1; i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (
+          Number(x.innerHTML.replace(",", "")) >
+          Number(y.innerHTML.replace(",", ""))
+        ) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (
+          Number(x.innerHTML.replace(",", "")) <
+          Number(y.innerHTML.replace(",", ""))
+        ) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount++;
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableTimeAll(n) {
+  var table,
+    rows,
+    switching,
+    i,
+    x,
+    y,
+    shouldSwitch,
+    dir,
+    switchcount = 0;
+  table = document.getElementById("covid_data_table_all");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc";
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < rows.length - 1; i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML > y.innerHTML) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML < y.innerHTML) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount++;
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableTimeHCMAll(n) {
+  var table,
+    rows,
+    switching,
+    i,
+    x,
+    y,
+    shouldSwitch,
+    dir,
+    switchcount = 0;
+  table = document.getElementById("covid_data_table_hcm_sub");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc";
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < rows.length - 1; i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (Date.parse(x.innerHTML.trim()) > Date.parse(y.innerHTML.trim())) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (Date.parse(x.innerHTML.trim()) < Date.parse(y.innerHTML.trim())) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
           break;

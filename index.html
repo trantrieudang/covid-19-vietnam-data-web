@@ -32,8 +32,8 @@
     
 
     <span id="new_effect"><i class="far fa-star"></i> Tổng số ca nhiễm cả nước trong ngày: <span id="new_effect_num"></span> ca</span>
-   
     
+    <span id="total_recovered"><i class="far fa-star"></i> Tổng số ca hồi phục cả nước: <span id="total_recovered_num"></span> ca</span>
     
 
     <span id="total_death"><i class="far fa-star"></i> Tổng số ca tử vong lũy kế: <span id="death_num"></span> ca</span>
@@ -72,6 +72,26 @@
             <tbody id="covid_data_body"></tbody> 
     </table>
     <br/>
+    <h2>Thống kê cả nước theo ngày</h2>
+    <br/>
+    <select id="myInputSubAll" oninput="myInputSubAll()"><option>All</option></select>
+    <div class="data_detail_all">
+        
+        <table id="covid_data_table_all">
+            <thead>
+                <tr id="covid_data_head_all">
+                    
+                    
+                    <th onclick="sortTableTimeAll(0)">Ngày thống kê <span><i class="fas fa-filter"></i></span></th>
+                    <th onclick="sortTableNumAll(1)">Số ca nhiễm theo ngày <span><i class="fas fa-filter"></i></span></th>
+                    <th onclick="sortTableNumAll(2)">Số ca hồi phục theo ngày <span><i class="fas fa-filter"></i></span></th>
+                    <th onclick="sortTableNumAll(3)">Số ca tử vong theo ngày <span><i class="fas fa-filter"></i></span></th>
+                </tr>
+            </thead>
+            <tbody id="covid_data_body_all"></tbody>
+    
+        </table>
+    </div>
     <br/>
     <input type="text" id="myInputHCMSubVac" onkeyup="myFunctionHCMSubVac()" placeholder="Tìm kiếm theo tên thành phố/tỉnh..." title="Type in a city/province">
     <div class="vacxin">
