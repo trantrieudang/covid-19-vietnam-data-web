@@ -640,8 +640,8 @@ function sortTableNum(n) {
       based on the direction, asc or desc:*/
       if (dir == "asc") {
         if (
-          Number(x.innerHTML.replace(",", "")) >
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) >
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -649,8 +649,8 @@ function sortTableNum(n) {
         }
       } else if (dir == "desc") {
         if (
-          Number(x.innerHTML.replace(",", "")) <
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) <
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -835,8 +835,8 @@ function sortTableNumHCM(n) {
       based on the direction, asc or desc:*/
       if (dir == "asc") {
         if (
-          Number(x.innerHTML.replace(",", "")) >
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) >
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -844,8 +844,8 @@ function sortTableNumHCM(n) {
         }
       } else if (dir == "desc") {
         if (
-          Number(x.innerHTML.replace(",", "")) <
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) <
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -973,8 +973,8 @@ function sortTableNumHCMVac(n) {
       based on the direction, asc or desc:*/
       if (dir == "asc") {
         if (
-          Number(x.innerHTML.replace(",", "")) >
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) >
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -982,8 +982,8 @@ function sortTableNumHCMVac(n) {
         }
       } else if (dir == "desc") {
         if (
-          Number(x.innerHTML.replace(",", "")) <
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) <
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -1042,8 +1042,8 @@ function sortTableNumHCMSub(n) {
       based on the direction, asc or desc:*/
       if (dir == "asc") {
         if (
-          Number(x.innerHTML.replace(",", "")) >
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) >
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -1051,8 +1051,8 @@ function sortTableNumHCMSub(n) {
         }
       } else if (dir == "desc") {
         if (
-          Number(x.innerHTML.replace(",", "")) <
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) <
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -1111,8 +1111,8 @@ function sortTableNumAll(n) {
       based on the direction, asc or desc:*/
       if (dir == "asc") {
         if (
-          Number(x.innerHTML.replace(",", "")) >
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) >
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
@@ -1120,8 +1120,8 @@ function sortTableNumAll(n) {
         }
       } else if (dir == "desc") {
         if (
-          Number(x.innerHTML.replace(",", "")) <
-          Number(y.innerHTML.replace(",", ""))
+          Number(x.innerHTML.replace(/,/g, "")) <
+          Number(y.innerHTML.replace(/,/g, ""))
         ) {
           //if so, mark as a switch and break the loop:
           shouldSwitch = true;
