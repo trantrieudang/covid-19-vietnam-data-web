@@ -284,11 +284,13 @@ body {
     margin-bottom: 10px;
 }
 #myInputSubAll{
+  margin-top:5px;
   width:100%;
    border:1px solid #ccc
 }
 
 #myInputHCMSub{
+  margin-top:5px;
   width:100%;
    border:1px solid #ccc
 }
