@@ -309,7 +309,7 @@ fetch(
                   options
                 )}
             </option>
-            
+           
         `;
         document.getElementById("myInputHCMSub").innerHTML += selectChosen;
       }

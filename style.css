@@ -1,12 +1,18 @@
 * {
   /* font-family: "Merriweather", serif; */
   /* font-family: 'Noto Serif', serif; */
-  
-font-family: 'Quicksand', sans-serif;
+
+  font-family: "Quicksand", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
   scroll-behavior: smooth;
+  
+}
+
+body {
+  margin: 0 450px;
+  
 }
 
 .fa-virus {
@@ -31,7 +37,7 @@ font-family: 'Quicksand', sans-serif;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -39,34 +45,34 @@ font-family: 'Quicksand', sans-serif;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_hcm_vacxin {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_hcm_sub {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_all {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_hcm_sub_vacxin {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 18px;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -74,21 +80,23 @@ font-family: 'Quicksand', sans-serif;
   font-size: 12px;
   font-weight: 700;
   font-style: italic;
+  color: green;
 }
 #myInput {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 20px 12px 40px;
-  border: 2px solid rgba(250, 186, 167, 0.684);
+  border: 1px solid rgba(116, 255, 169, 0.2);
   border-radius: 5px;
   margin-bottom: 12px;
   box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
 }
 
 #myInput:focus {
-  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  transition: all 0.5s;
+  box-shadow: rgb(116, 255, 169) 0px 3px 16px;
   outline: none;
 }
 
@@ -96,16 +104,17 @@ font-family: 'Quicksand', sans-serif;
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 20px 12px 40px;
-  border: 2px solid rgba(250, 186, 167, 0.684);
+  border: 1px solid rgba(116, 255, 169, 0.2);
   border-radius: 5px;
   margin-bottom: 12px;
   box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
 }
 
 #myInputHCMSubVac:focus {
-  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  transition: all 0.5s;
+  box-shadow: rgb(116, 255, 169) 0px 3px 16px;
   outline: none;
 }
 
@@ -113,51 +122,177 @@ font-family: 'Quicksand', sans-serif;
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 20px 12px 40px;
-  border: 2px solid rgba(250, 186, 167, 0.684);
+  border: 1px solid rgba(116, 255, 169, 0.2);
   border-radius: 5px;
   margin-bottom: 12px;
   box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
 }
 
 #myInputHCM:focus {
-  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  transition: all 0.5s;
+  box-shadow: rgb(116, 255, 169) 0px 3px 16px;
   outline: none;
 }
 
-#myInputHCMSub {
+/* #myInputHCMSub {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 20px 12px 40px;
-  border: 2px solid rgba(250, 186, 167, 0.684);
-  border-radius: 5px;
-  margin-bottom: 12px;
-  box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
-}
-
-#myInputSubAll {
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 2px solid rgba(250, 186, 167, 0.684);
+  border: 1px solid rgba(116, 255, 169, 0.2);
   border-radius: 5px;
   margin-bottom: 12px;
   box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
 }
 
 #myInputHCMSub:focus {
-  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  transition: all 0.5s;
+  box-shadow: rgb(116, 255, 169) 0px 3px 16px;
   outline: none;
+} */
+
+/* 
+#customSelector{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: #888;
+}
+#customSelector select{
+  font-size: 18px;
+  width: 100%;
+  min-height: 40px;
+  background: #cbe7ff;
+  border-radius: 6px;
+  border: 2px solid #2196f3;
+  outline: none;
+  padding: 0 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  appearance: none;
+  color: #111130;
+  font-weight: 700;
+  
+}
+
+
+#customSelector select option{
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  background-color: gray;
+  color: #fff;
+  
+}
+
+
+#customSelector select optgroup{
+  border-radius: 5px;
+  
+}
+
+#customSelector::after{
+  content: '';
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: red;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  bottom: 28px;
+  border-radius: 2px;
+} */
+
+/* #customSelector .selector-options{
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  background: #11436b;
+  border-radius: 4px;
+  z-index: 100;
+  width: 96%;
+  position: absolute;
+  left: 2%;
+  top:35%;
+
+}
+
+#customSelector .selector-options li{
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+#customSelector .selector-options li:hover{
+  background: #03a9f4;
+} */
+
+/* #myInputSubAll {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid rgba(116, 255, 169, 0.2);
+  border-radius: 5px;
+  margin-bottom: 12px;
+ 
+  box-shadow: rgba(255, 223, 223, 0.884) 0px 3px 8px;
+  width: 100%;
+  min-height: 35px;
+  background: #cbe7ff;
+  border-radius: 3px;
+  border: 2px solid #2196f3;
+  outline: none;
+  padding: 12px 20px 12px 40px;
+  font-size: 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
 }
 #myInputSubAll:focus {
-  box-shadow: rgb(248, 240, 205) 0px 3px 16px;
+  transition: all 0.5s;
+  box-shadow: rgb(116, 255, 169) 0px 3px 16px;
   outline: none;
+  
+} */
+
+#customSelector{
+  border: 1px dashed red;
+    height: 100%;
+    
+    width: 75%;
+    margin-bottom: 10px;
 }
+#customSelector2{
+  border: 1px dashed red;
+    height: 100%;
+    
+    width: 75%;
+    margin-bottom: 10px;
+}
+#myInputSubAll{
+  width:100%;
+   border:1px solid #ccc
+}
+
+#myInputHCMSub{
+  width:100%;
+   border:1px solid #ccc
+}
+
 #covid_data_table td,
 #covid_data_table th {
   border: 1px solid #ddd;
@@ -272,7 +407,7 @@ font-family: 'Quicksand', sans-serif;
 #total_effect {
   display: inline-block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: red;
   background-color: #fff;
   font-weight: 700;
@@ -284,7 +419,7 @@ font-family: 'Quicksand', sans-serif;
 #total_recovered {
   display: inline-block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: green;
   background-color: #fff;
   font-weight: 700;
@@ -296,7 +431,7 @@ font-family: 'Quicksand', sans-serif;
 #total_treating {
   display: inline-block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: #ff671f;
   background-color: #fff;
   font-weight: 700;
@@ -307,7 +442,7 @@ font-family: 'Quicksand', sans-serif;
 #total_first_injection {
   display: inline-block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: green;
   background-color: #fff;
   font-weight: 700;
@@ -318,7 +453,7 @@ font-family: 'Quicksand', sans-serif;
 #total_done_injection {
   display: inline-block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: green;
   background-color: #fff;
   font-weight: 700;
@@ -328,9 +463,9 @@ font-family: 'Quicksand', sans-serif;
 }
 #new_effect {
   display: inline-block;
-  
+
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: red;
   background-color: #fff;
   font-weight: 700;
@@ -343,7 +478,7 @@ font-family: 'Quicksand', sans-serif;
   display: inline-block;
   margin-top: 10px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: black;
   background-color: #fff;
   font-weight: 700;
@@ -355,7 +490,7 @@ font-family: 'Quicksand', sans-serif;
 #total_effect_hcm {
   display: inline-block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: red;
   background-color: #fff;
   font-weight: 700;
@@ -366,9 +501,9 @@ font-family: 'Quicksand', sans-serif;
 
 #new_effect_hcm {
   display: inline-block;
- 
+
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: red;
   background-color: #fff;
   font-weight: 700;
@@ -469,17 +604,73 @@ font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
-#covid_by_day{
+#covid_by_day {
   color: red;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1700px){
+  body {
+    margin: 0 300px;
+  }
+}
+@media only screen and (max-width: 1392px){
+  body {
+    margin: 0 200px;
+  }
+}
+
+@media only screen and (max-width: 960px){
+  body {
+    margin: 0 150px;
+  }
+}
+
+@media only screen and (max-width: 735px){
+  body {
+    margin: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 524px){
+  body {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 419px) {
+  body {
+    margin: 0;
+  }
   #total_vn {
     font-size: 18px;
     font-weight: 700;
   }
+
+  #covid_data_table {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  #covid_data_table_hcm {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #covid_data_table_hcm_vacxin {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #covid_data_table_hcm_sub {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #covid_data_table_all {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   #covid_data_table_hcm_sub_vacxin {
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   #total_effect {
@@ -589,24 +780,29 @@ font-family: 'Quicksand', sans-serif;
     line-height: 2.5;
     width: 100%;
   }
-  #special_title{
+  #special_title {
     font-size: 17px;
     font-weight: 700;
   }
-  #vacxin_title{
+  #vacxin_title {
     font-size: 17px;
     font-weight: 700;
   }
-  #click_me_hcm{
+  #click_me_hcm {
     font-size: 17px;
     font-weight: 700;
   }
-  #covid_by_day{
+  #covid_by_day {
     font-size: 17px;
     font-weight: 700;
   }
-  #vacxin_title{
+  #vacxin_title {
     font-size: 17px;
     font-weight: 700;
   }
 }
+
+
+
+
+
