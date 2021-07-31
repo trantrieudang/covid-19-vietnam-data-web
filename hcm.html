@@ -9,9 +9,12 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/virus1.png"/>    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/virus1.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -51,17 +54,17 @@
         <canvas id="myChart"></canvas>
     </div>
     <br />
-    <br/>
+    <br />
     <a id="click_me_hcm" href="#myInputHCMSub">Detail số liệu từ 29/04 bên dưới nhé :) Click me!!!</a>
-    <br/>
-    <br/>
+    <br />
+    <br />
     <input type="text" id="myInputHCM" onkeyup="myFunctionHCM()" placeholder="Tìm kiếm theo tên quận/huyện..."
         title="Type in a city/province">
     <br />
     <table id="covid_data_table_hcm">
         <thead>
             <tr id="covid_data_head_hcm">
-                
+
                 <th onclick="sortTableAlphabetHCM(0)">Thống kê theo
                     quận/huyện <span><i class="fas fa-filter"></i></span></th>
                 <th onclick="sortTableNumHCM(1)">Tổng số
@@ -74,32 +77,35 @@
         <tbody id="covid_data_body_hcm"></tbody>
 
     </table>
-    <br/>
-    <br/>
+    <br />
+    <br />
     <div id="customSelector2">
         Chọn ngày cần xem
-        <select id="myInputHCMSub" oninput="myFunctionHCMSub()"><option>All</option></select>
+        <select id="myInputHCMSub" oninput="myFunctionHCMSub()">
+            <option>All</option>
+        </select>
     </div>
-    
+
     <div class="data_detail">
-        
+
         <table id="covid_data_table_hcm_sub">
             <thead>
                 <tr id="covid_data_head_hcm_sub">
-                    
-                    
+
+
                     <th onclick="sortTableTimeHCMAll(0)">Ngày thống kê <span><i class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumHCMSub(1)">Tổng ca nhiễm lũy kế <span><i class="fas fa-filter"></i></span></th>
-    
+                    <th onclick="sortTableNumHCMSub(1)">Tổng ca nhiễm lũy kế <span><i class="fas fa-filter"></i></span>
+                    </th>
+
                 </tr>
             </thead>
             <tbody id="covid_data_body_hcm_sub"></tbody>
-    
+
         </table>
     </div>
 
 
-   
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

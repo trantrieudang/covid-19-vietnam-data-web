@@ -272,29 +272,40 @@ body {
 #customSelector{
   border: 1px dashed red;
     height: 100%;
-    
+    font-weight: 700;
     width: 75%;
     margin-bottom: 10px;
 }
 #customSelector2{
   border: 1px dashed red;
     height: 100%;
-    
+    font-weight: 700;
     width: 75%;
     margin-bottom: 10px;
 }
 #myInputSubAll{
   margin-top:5px;
+  font-weight: 700;
   width:100%;
    border:1px solid #ccc
 }
+
+#myInputSubAll option{
+
+  font-weight: 700;
+ 
+   
+} 
 
 #myInputHCMSub{
   margin-top:5px;
   width:100%;
-   border:1px solid #ccc
+   border:1px solid #ccc;
+   font-weight: 700;
 }
-
+#myInputHCMSub option{
+  font-weight: 700;
+}
 #covid_data_table td,
 #covid_data_table th {
   border: 1px solid #ddd;
