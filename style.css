@@ -1,5 +1,8 @@
 * {
-  font-family: "Merriweather", serif;
+  /* font-family: "Merriweather", serif; */
+  /* font-family: 'Noto Serif', serif; */
+  
+font-family: 'Quicksand', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 5px;
@@ -15,7 +18,7 @@
 }
 #total_vn {
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 @keyframes fall {
@@ -69,7 +72,7 @@
 }
 #author {
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
 }
 #myInput {
@@ -272,7 +275,7 @@
   font-size: 18px;
   color: red;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 2.5;
   font-style: italic;
   width: 100%;
@@ -284,7 +287,7 @@
   font-size: 18px;
   color: green;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 2.5;
   font-style: italic;
   width: 100%;
@@ -296,7 +299,7 @@
   font-size: 18px;
   color: #ff671f;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 2.5;
   font-style: italic;
   width: 100%;
@@ -307,7 +310,7 @@
   font-size: 18px;
   color: green;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 2.5;
   font-style: italic;
   width: 100%;
@@ -318,19 +321,19 @@
   font-size: 18px;
   color: green;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 2.5;
   font-style: italic;
   width: 100%;
 }
 #new_effect {
   display: inline-block;
-  margin-top: 10px;
+  
   padding: 10px;
   font-size: 18px;
   color: red;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
   line-height: 2.5;
   width: 100%;
@@ -343,7 +346,7 @@
   font-size: 18px;
   color: black;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
   line-height: 2.5;
   width: 100%;
@@ -355,7 +358,7 @@
   font-size: 18px;
   color: red;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 2.5;
   font-style: italic;
   width: 100%;
@@ -363,12 +366,12 @@
 
 #new_effect_hcm {
   display: inline-block;
-  margin-top: 10px;
+ 
   padding: 10px;
   font-size: 18px;
   color: red;
   background-color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
   line-height: 2.5;
   width: 100%;
@@ -441,7 +444,7 @@
   display: inline-block;
   font-family: Verdana;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
 }
 #special_title {
   color: red;
