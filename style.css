@@ -475,20 +475,20 @@ font-family: 'Quicksand', sans-serif;
 
 @media only screen and (max-width: 480px) {
   #total_vn {
-    font-size: 15px;
-    font-weight: 900;
+    font-size: 18px;
+    font-weight: 700;
   }
   #covid_data_table_hcm_sub_vacxin {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   #total_effect {
     display: inline-block;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: red;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 2.5;
     font-style: italic;
     width: 100%;
@@ -497,10 +497,10 @@ font-family: 'Quicksand', sans-serif;
   #total_recovered {
     display: inline-block;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: green;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 2.5;
     font-style: italic;
     width: 100%;
@@ -509,10 +509,10 @@ font-family: 'Quicksand', sans-serif;
   #total_treating {
     display: inline-block;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: #ff671f;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 2.5;
     font-style: italic;
     width: 100%;
@@ -520,10 +520,10 @@ font-family: 'Quicksand', sans-serif;
   #total_first_injection {
     display: inline-block;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: green;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 2.5;
     font-style: italic;
     width: 100%;
@@ -531,10 +531,10 @@ font-family: 'Quicksand', sans-serif;
   #total_done_injection {
     display: inline-block;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: green;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 2.5;
     font-style: italic;
     width: 100%;
@@ -543,10 +543,10 @@ font-family: 'Quicksand', sans-serif;
     display: inline-block;
     margin-top: 10px;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: red;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
     line-height: 2.5;
     width: 100%;
@@ -556,10 +556,10 @@ font-family: 'Quicksand', sans-serif;
     display: inline-block;
     margin-top: 10px;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: black;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
     line-height: 2.5;
     width: 100%;
@@ -568,10 +568,10 @@ font-family: 'Quicksand', sans-serif;
   #total_effect_hcm {
     display: inline-block;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: red;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 2.5;
     font-style: italic;
     width: 100%;
@@ -581,32 +581,32 @@ font-family: 'Quicksand', sans-serif;
     display: inline-block;
     margin-top: 10px;
     padding: 10px;
-    font-size: 13px;
+    font-size: 17px;
     color: red;
     background-color: #fff;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
     line-height: 2.5;
     width: 100%;
   }
   #special_title{
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
   }
   #vacxin_title{
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
   }
   #click_me_hcm{
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
   }
   #covid_by_day{
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
   }
   #vacxin_title{
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
   }
 }
