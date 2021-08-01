@@ -8,7 +8,7 @@
   /* font-family: "Quicksand", sans-serif; */
   box-sizing: border-box;
   margin: 0;
-  padding: 5px;
+  padding: 2px;
   scroll-behavior: smooth;
 }
 
@@ -35,16 +35,17 @@ body {
 }
 
 #covid_data_table {
-  font-family: Arial, Helvetica, sans-serif;
+  
   border-collapse: collapse;
   width: 100%;
   font-size: 18px;
   font-weight: 600;
+  
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #covid_data_table_hcm {
-  font-family: Arial, Helvetica, sans-serif;
+ 
   border-collapse: collapse;
   width: 100%;
   font-size: 18px;
@@ -52,7 +53,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_hcm_vacxin {
-  font-family: Arial, Helvetica, sans-serif;
+  
   border-collapse: collapse;
   width: 100%;
   font-size: 18px;
@@ -60,7 +61,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_hcm_sub {
-  font-family: Arial, Helvetica, sans-serif;
+  
   border-collapse: collapse;
   width: 100%;
   font-size: 18px;
@@ -68,7 +69,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_all {
-  font-family: Arial, Helvetica, sans-serif;
+  
   border-collapse: collapse;
   width: 100%;
   font-size: 18px;
@@ -76,7 +77,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #covid_data_table_hcm_sub_vacxin {
-  font-family: Arial, Helvetica, sans-serif;
+  
   border-collapse: collapse;
   font-size: 18px;
   width: 100%;
@@ -432,7 +433,7 @@ body {
   color: red;
   background-color: #fff;
   font-weight: 900;
-  line-height: 2.5;
+  
   font-style: italic;
   width: 100%;
 }
@@ -444,7 +445,7 @@ body {
   color: green;
   background-color: #fff;
   font-weight: 900;
-  line-height: 2.5;
+ 
   font-style: italic;
   width: 100%;
 }
@@ -456,7 +457,7 @@ body {
   color: #ff671f;
   background-color: #fff;
   font-weight: 900;
-  line-height: 2.5;
+  
   font-style: italic;
   width: 100%;
 }
@@ -467,7 +468,7 @@ body {
   color: green;
   background-color: #fff;
   font-weight: 900;
-  line-height: 2.5;
+  
   font-style: italic;
   width: 100%;
 }
@@ -478,33 +479,33 @@ body {
   color: green;
   background-color: #fff;
   font-weight: 900;
-  line-height: 2.5;
+  
   font-style: italic;
   width: 100%;
 }
 #new_effect {
   display: inline-block;
-
+  
   padding: 10px;
   font-size: 20px;
   color: red;
   background-color: #fff;
   font-weight: 900;
   font-style: italic;
-  line-height: 2.5;
+  
   width: 100%;
 }
 
 #total_death {
   display: inline-block;
-  margin-top: 10px;
+ 
   padding: 10px;
   font-size: 20px;
   color: black;
   background-color: #fff;
   font-weight: 900;
   font-style: italic;
-  line-height: 2.5;
+  
   width: 100%;
 }
 
@@ -515,7 +516,7 @@ body {
   color: red;
   background-color: #fff;
   font-weight: 900;
-  line-height: 2.5;
+  
   font-style: italic;
   width: 100%;
 }
@@ -529,7 +530,7 @@ body {
   background-color: #fff;
   font-weight: 900;
   font-style: italic;
-  line-height: 2.5;
+ 
   width: 100%;
 }
 
@@ -602,6 +603,15 @@ body {
   font-size: 20px;
   font-weight: 900;
 }
+
+#total_daily_statics{
+  padding: 10px;
+  color: red;
+  display: inline-block;
+  
+  font-size: 20px;
+  font-weight: 900;
+}
 #special_title {
   color: red;
 }
@@ -616,6 +626,7 @@ body {
 }
 #vacxin_title {
   color: red;
+  margin-top: 10px;
 }
 
 
@@ -628,6 +639,7 @@ body {
 }
 #covid_by_day {
   color: red;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1700px) {
@@ -664,162 +676,195 @@ body {
     margin: 0;
   }
   #total_vn {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 900;
   }
 
   #covid_data_table {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
   }
 
   #covid_data_table_hcm {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
   }
   #covid_data_table_hcm_vacxin {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
   }
   #covid_data_table_hcm_sub {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
   }
   #covid_data_table_all {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
   }
 
   #covid_data_table_hcm_sub_vacxin {
-    font-size: 16px;
+    
+    font-size: 13px;
     font-weight: 600;
   }
 
   #total_effect {
     display: inline-block;
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 16px;
     color: red;
     background-color: #fff;
     font-weight: 900;
-    line-height: 2.5;
+    
     font-style: italic;
     width: 100%;
   }
 
   #total_recovered {
     display: inline-block;
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 16px;
     color: green;
     background-color: #fff;
     font-weight: 900;
-    line-height: 2.5;
+    
     font-style: italic;
     width: 100%;
   }
 
   #total_treating {
     display: inline-block;
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 16px;
     color: #ff671f;
     background-color: #fff;
     font-weight: 900;
-    line-height: 2.5;
+    
     font-style: italic;
     width: 100%;
   }
   #total_first_injection {
     display: inline-block;
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 16px;
     color: green;
     background-color: #fff;
     font-weight: 900;
-    line-height: 2.5;
+    
     font-style: italic;
     width: 100%;
   }
   #total_done_injection {
     display: inline-block;
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 16px;
     color: green;
     background-color: #fff;
     font-weight: 900;
-    line-height: 2.5;
+    
     font-style: italic;
     width: 100%;
   }
   #new_effect {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 17px;
+    
+    padding: 5px;
+    font-size: 16px;
     color: red;
     background-color: #fff;
     font-weight: 900;
     font-style: italic;
-    line-height: 2.5;
+    
     width: 100%;
   }
 
   #total_death {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 17px;
+   
+    padding: 5px;
+    font-size: 16px;
     color: black;
     background-color: #fff;
     font-weight: 900;
     font-style: italic;
-    line-height: 2.5;
+    
     width: 100%;
   }
 
   #total_effect_hcm {
     display: inline-block;
-    padding: 10px;
-    font-size: 17px;
+    padding: 5px;
+    font-size: 16px;
     color: red;
     background-color: #fff;
     font-weight: 900;
-    line-height: 2.5;
+    
     font-style: italic;
     width: 100%;
   }
 
   #new_effect_hcm {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 17px;
+    
+    padding: 5px;
+    font-size: 16px;
     color: red;
     background-color: #fff;
     font-weight: 900;
     font-style: italic;
-    line-height: 2.5;
+    
     width: 100%;
   }
+  #special{
+    font-size: 14px;
+    font-weight: 900;
+  }
   #special_title {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 900;
   }
   #vacxin_title {
-    font-size: 17px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+  #total_daily_statics{
+    font-size: 14px;
     font-weight: 900;
   }
   #click_me_hcm {
-    font-size: 17px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+  #injectionProgress{
+    font-size: 14px;
     font-weight: 900;
   }
   #covid_by_day {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 900;
   }
   #vacxin_title {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 900;
   }
+  #myInput {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  
+  
+  #myInputHCMSubVac {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  
+  
+  #myInputHCM {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  
 }

@@ -33,40 +33,45 @@
     </div> -->
 
 
-    <span id="total_effect"><i class="far fa-sad-tear"></i> Tổng số ca nhiễm cả nước: <span
+    <span id="total_effect"> Tổng số ca nhiễm cả nước: <span
             id="total_effect_num"></span> ca </span>
 
-    <span id="new_effect"><i class="far fa-star"></i> Tổng số ca nhiễm cả nước trong ngày: <span
+    <span id="new_effect"> Tổng số ca nhiễm cả nước trong ngày: <span
             id="new_effect_num"></span> ca</span>
 
-    <span id="total_treating"><i class="far fa-star"></i> Tổng số ca đang điều trị cả nước: <span
+    <span id="total_treating"> Tổng số ca đang điều trị cả nước: <span
             id="total_treating_num"></span> ca</span>
 
-    <span id="total_recovered"><i class="far fa-star"></i> Tổng số ca hồi phục cả nước: <span
+    <span id="total_recovered"> Tổng số ca hồi phục cả nước: <span
             id="total_recovered_num"></span> ca</span>
 
-    <span id="total_death"><i class="far fa-star"></i> Tổng số ca tử vong lũy kế: <span id="death_num"></span> ca</span>
+    <span id="total_death"> Tổng số ca tử vong lũy kế: <span id="death_num"></span> ca</span>
 
-    <span id="total_first_injection"><i class="far fa-star"></i> Tiêm liều 1: <span id="first_injection_num"></span>
+    <span id="total_first_injection"> Tiêm liều 1: <span id="first_injection_num"></span>
         người</span>
 
-    <span id="total_done_injection"><i class="far fa-star"></i> Tiêm đủ liều: <span id="done_injection_num"></span>
+    <span id="total_done_injection"> Tiêm đủ liều: <span id="done_injection_num"></span>
         người</span>
 
     <div id="special">
-        <i class="far fa-star"></i><a href="/hcm.html" id="special_title"> Tiêu điểm TPHCM </a><i
+        <i class="far fa-star"></i><a href="/hcm.html" id="special_title"> Tiêu điểm TPHCM <i class="far fa-hand-point-left"></i> Click me!!! </a><i
+            class="far fa-star"></i>
+
+    </div>
+
+    <div id="total_daily_statics">
+        <i class="far fa-star"></i><a href="#covid_by_day" id="special_title"> Thống kê cả nước theo ngày <i class="far fa-hand-point-left"></i> Click me!!! </a><i
             class="far fa-star"></i>
 
     </div>
 
     <div id="injectionProgress">
-        <i class="far fa-star"></i><a href="#myInputHCMSubVac" id="vacxin_title"> Kết quả tiêm chủng bên dưới </a><i
+        <i class="far fa-star"></i><a href="#vacxin_title" id="vacxin_title"> Kết quả tiêm chủng bên dưới <i class="far fa-hand-point-left"></i> Click me!!! </a><i
             class="far fa-star"></i>
 
     </div>
 
-    <br />
-    <br />
+    
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Tìm kiếm theo tên thành phố/tỉnh..."
         title="Type in a city/province">
     <table id="covid_data_table">
@@ -86,9 +91,9 @@
         </thead>
         <tbody id="covid_data_body"></tbody>
     </table>
-    <br />
+    
     <h2 id="covid_by_day">Thống kê cả nước theo ngày</h2>
-    <br />
+    
     <div id="customSelector">
         Chọn ngày cần xem
         
@@ -117,9 +122,9 @@
 
         </table>
     </div>
-    <br />
+   
     <h2 class="vacxin_title" id="vacxin_title">Kết quả tiêm chủng</h2>
-    <br />
+    
     <input type="text" id="myInputHCMSubVac" onkeyup="myFunctionHCMSubVac()"
         placeholder="Tìm kiếm theo tên thành phố/tỉnh..." title="Type in a city/province">
     <div class="vacxin">
