@@ -238,7 +238,7 @@ fetch(
 
       let ctx = document.getElementById("myChart");
       ctx.height = 200;
-
+      Chart.defaults.font.family = "Arima Madurai";
       let myChart = new Chart(ctx, {
         plugins: [ChartDataLabels],
         type: "bar",
@@ -248,8 +248,8 @@ fetch(
             {
               label: "số ca",
               data: dataArr,
-              backgroundColor: ["rgba(255, 99, 132, 0.3)"],
-              borderColor: ["rgba(255, 99, 132, 1)"],
+              backgroundColor: ["rgba(121, 226, 203, 0.8)"],
+              borderColor: ["rgba(255, 99, 132, 0)"],
               borderWidth: 0.5,
               datalabels: {
                 color: "red",
@@ -262,6 +262,7 @@ fetch(
                 font: {
                   size: 12,
                   weight: "bold",
+                  family: "Arima Madurai",
                 },
               },
             },
@@ -274,7 +275,7 @@ fetch(
               display: true,
               text: "Số ca covid-19 tại TP.HCM 7 ngày vừa qua",
               font: {
-                size: 20,
+                size: 16,
               },
             },
           },
