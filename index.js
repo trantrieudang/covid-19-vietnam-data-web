@@ -56,17 +56,11 @@ fetch("https://emag.thanhnien.vn/covid19/home/getAllPatientProvinces", options)
       let newArr = list.map((obj) => Object.values(obj));
       console.log(newArr);
 
-      let sumNew = 0;
       // let sumAccumulated = 0;
       // let deathAccumulated = 0;
       let firstInjectionAccumulated = 0;
       let fullInjectionAccumulated = 0;
       for (let i = 0; i < newArr.length; i++) {
-        sumNew += Number(newArr[i][5]);
-        document.getElementById("new_effect_num").innerHTML = sumNew
-          .toString()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
         // sumAccumulated += Number(newArr[i][4]);
         // document.getElementById("total_effect_num").innerHTML = sumAccumulated
         //   .toString()
@@ -407,6 +401,12 @@ fetch("https://emag.thanhnien.vn/covid19/home/GetChartCovid", options2)
         `;
         document.getElementById("myInputSubAll").innerHTML += selectChosen;
       }
+
+      let sumNew = newArrDesc[0][2];
+
+      document.getElementById("new_effect_num").innerHTML = sumNew
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
       for (let i = 0; i < newArrDesc.length; i++) {
         const options = { month: "long", day: "numeric", year: "numeric" };
