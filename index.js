@@ -96,12 +96,7 @@ fetch("https://emag.thanhnien.vn/covid19/home/getAllPatientProvinces", options)
             <td >
                 ${newArr[i][5].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
-            <td >
-                ${newArr[i][7].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </td>
-            <td >
-                ${newArr[i][6].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </td>
+            
             
         </tr>
       `;
