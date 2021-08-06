@@ -52,9 +52,9 @@ fetch("https://emag.thanhnien.vn/covid19/home/getAllPatientProvinces", options)
   .then((data) => {
     if (data != null || data != undefined) {
       const { list } = data;
-      console.log(list);
+      // console.log(list);
       let newArr = list.map((obj) => Object.values(obj));
-      console.log(newArr);
+      // console.log(newArr);
 
       // let sumAccumulated = 0;
       // let deathAccumulated = 0;
@@ -151,13 +151,13 @@ fetch(
 
     if (data !== undefined || data !== null) {
       let arr = data.map((obj) => Object.values(obj));
-      // console.log(arr);
-      let arr2 = arr.sort((a, b) => b[21] - a[21]);
+      console.log(arr);
+      let arr2 = arr.sort((a, b) => b[24] - a[24]);
       for (let i = 0; i < arr2.length; i++) {
         const contentHTML = `<tr>
         
         <td>
-           ${arr2[i][9]
+           ${arr2[i][10]
              .toString()
              .trim()
              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -166,13 +166,13 @@ fetch(
              .replaceAll("]", "")}
         </td>
         <td id="data_1">
-        ${arr2[i][22]
+        ${arr2[i][25]
           .toString()
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
         <td id="data_2">
-        ${arr2[i][21]
+        ${arr2[i][24]
           .toString()
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
@@ -196,25 +196,25 @@ fetch(
     if (data !== undefined || data !== null) {
       let arr = data.map((obj) => Object.values(obj));
 
-      // console.log(arr);
-      const newArr = arr.sort((a, b) => new Date(a[10]) - new Date(b[10]));
+      const newArr = arr.sort((a, b) => new Date(a[11]) - new Date(b[11]));
+      // console.log(newArr);
       let index = newArr.length - 1;
       let sumHCMBYDAY = 0;
       let sumHCM = 0;
-      sumHCMBYDAY = arr[index][21];
+      sumHCMBYDAY = arr[index][24];
       document.getElementById("new_effect_num_hcm").innerHTML = sumHCMBYDAY
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-      sumHCM = arr[index][22];
+      sumHCM = arr[index][25];
       document.getElementById("total_effect_num_hcm").innerHTML = sumHCM
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       const labelArr = newArr.map((item) => {
         const options = { month: "short", day: "numeric" };
-        return new Date(item[10]).toLocaleDateString("vi-VN", options);
+        return new Date(item[11]).toLocaleDateString("vi-VN", options);
       });
-      const dataArr = newArr.map((item) => item[22]);
+      const dataArr = newArr.map((item) => item[25]);
       // let minShow = Math.floor(
       //   (new Date().getTime() - new Date("2021/04/29").getTime()) /
       //     (1000 * 60 * 60 * 24)
@@ -288,14 +288,14 @@ fetch(
           },
         },
       });
-      const newArrDesc = arr.sort((a, b) => new Date(b[10]) - new Date(a[10]));
-      console.log(newArrDesc);
+      const newArrDesc = arr.sort((a, b) => new Date(b[11]) - new Date(a[11]));
+      // console.log(newArrDesc);
       for (let i = 0; i < newArrDesc.length; i++) {
         const options = { month: "long", day: "numeric", year: "numeric" };
         const selectChosen = `
             
             <option>
-                ${new Date(newArrDesc[i][10]).toLocaleDateString(
+                ${new Date(newArrDesc[i][11]).toLocaleDateString(
                   "en-US",
                   options
                 )}
@@ -310,13 +310,13 @@ fetch(
         const y = `
             <tr>
             <td >
-                ${new Date(newArrDesc[i][10]).toLocaleDateString(
+                ${new Date(newArrDesc[i][11]).toLocaleDateString(
                   "en-US",
                   options
                 )}
             </td>
             <td > 
-                ${newArrDesc[i][22]
+                ${newArrDesc[i][25]
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
@@ -337,9 +337,9 @@ fetch("https://emag.thanhnien.vn/covid19/home/getSummPatient", options1)
   .then((response) => response.json())
   .then((item) => {
     if (item != null || item != undefined) {
-      console.log(item);
+      // console.log(item);
       const { data } = item;
-      console.log(data);
+      // console.log(data);
       let sumAcc = 0,
         deathAcc = 0,
         recoverAcc = 0,
@@ -375,13 +375,13 @@ fetch("https://emag.thanhnien.vn/covid19/home/GetChartCovid", options2)
   .then((response) => response.json())
   .then((item) => {
     if (item != null || item != undefined) {
-      console.log(item);
+      // console.log(item);
       const { list } = item;
-      console.log(list);
+      // console.log(list);
       let arr = list.map((obj) => Object.values(obj));
-      console.log(arr);
+      // console.log(arr);
       const newArrDesc = arr.sort((a, b) => new Date(b[0]) - new Date(a[0]));
-      console.log(newArrDesc);
+      // console.log(newArrDesc);
       for (let i = 0; i < newArrDesc.length; i++) {
         const options = { month: "long", day: "numeric", year: "numeric" };
         const selectChosen = `

@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-        <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Pacifico&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="assets/images/virus1.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Pacifico&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/virus1.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Covid-19-TranTrieuDang</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1 id="author">Created by Trần Triều Dâng</h1>
     <h1 id="total_vn">Số liệu covid chi tiết từng quận huyện TP.HCM</h1>
     <!-- <div class="audio_container">
@@ -36,86 +54,203 @@
                 class="fas fa-music"></i></div>
         <audio controls class="song" id="song" autoplay="true" loop="true" src="assets/music/song2.mp3"></audio>
     </div> -->
-   
 
-    <span id="total_effect_hcm"> Tổng số ca nhiễm toàn thành phố: <span
-            id="total_effect_num_hcm"></span> ca </span>
-   
+    <span id="total_effect_hcm">
+      Tổng số ca nhiễm toàn thành phố:
+      <span id="total_effect_num_hcm"></span> ca
+    </span>
 
+    <span id="new_effect_hcm">
+      Tổng số ca nhiễm toàn thành phố trong ngày:
+      <span id="new_effect_num_hcm"></span> ca</span
+    >
 
-    <span id="new_effect_hcm"> Tổng số ca nhiễm toàn thành phố trong ngày: <span
-            id="new_effect_num_hcm"></span> ca</span>
-   
     <div id="special">
-        <i class="far fa-star"></i><a href="/index.html" id="special_title"> Trở về Trang Chủ </a><i
-            class="far fa-star"></i>
-
+      <i class="far fa-star"></i
+      ><a href="/index.html" id="special_title"> Trở về Trang Chủ </a
+      ><i class="far fa-star"></i>
     </div>
-    
-
 
     <div id="dataChart">
-        <canvas id="myChart"></canvas>
+      <canvas id="myChart"></canvas>
     </div>
-    
-    <a id="click_me_hcm" href="#myInputHCMSub">Detail số liệu từ 29/04 bên dưới nhé :) <i class="far fa-hand-point-left"></i> Click me!!!</a>
-    
-    <input type="text" id="myInputHCM" onkeyup="myFunctionHCM()" placeholder="Tìm kiếm theo tên quận/huyện..."
-        title="Type in a city/province">
- 
+
+    <div
+      class="tableauPlaceholder"
+      id="viz1628217568889"
+      style="position: relative"
+    >
+      <noscript
+        ><a href="#"
+          ><img
+            alt="Dashboard 2 "
+            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BI&#47;BIEUDO_COVID19&#47;Dashboard2&#47;1_rss.png"
+            style="border: none" /></a></noscript
+      ><object class="tableauViz" style="display: none">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="BIEUDO_COVID19&#47;Dashboard2" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param
+          name="static_image"
+          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BI&#47;BIEUDO_COVID19&#47;Dashboard2&#47;1.png"
+        />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+        <param name="filter" value="publish=yes" />
+      </object>
+    </div>
+
+    <div
+      class="tableauPlaceholder"
+      id="viz1628217722193"
+      style="position: relative"
+    >
+      <noscript
+        ><a href="#"
+          ><img
+            alt="Dashboard 1 "
+            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Biu&#47;Dashboard1&#47;1_rss.png"
+            style="border: none" /></a></noscript
+      ><object class="tableauViz" style="display: none">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="Biu&#47;Dashboard1" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param
+          name="static_image"
+          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Biu&#47;Dashboard1&#47;1.png"
+        />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+        <param name="filter" value="publish=yes" />
+      </object>
+    </div>
+    <br/>
+    <br/>
+    <a id="click_me_hcm" href="#myInputHCMSub"
+      >Detail số liệu từ 29/04 bên dưới nhé :)
+      <i class="far fa-hand-point-left"></i> Click me!!!</a
+    >
+
+    <input
+      type="text"
+      id="myInputHCM"
+      onkeyup="myFunctionHCM()"
+      placeholder="Tìm kiếm theo tên quận/huyện..."
+      title="Type in a city/province"
+    />
+
     <table id="covid_data_table_hcm">
-        <thead>
-            <tr id="covid_data_head_hcm">
-
-                <th onclick="sortTableAlphabetHCM(0)">Thống kê theo
-                    quận/huyện <span><i class="fas fa-filter"></i></span></th>
-                <th onclick="sortTableNumHCM(1)">Tổng số
-                    ca nhiễm <span><i class="fas fa-filter"></i></span></th>
-                <th onclick="sortTableNumHCM(2)">Ca nhiễm
-                    hôm nay <span><i class="fas fa-filter"></i></span></th>
-
-            </tr>
-        </thead>
-        <tbody id="covid_data_body_hcm"></tbody>
-
+      <thead>
+        <tr id="covid_data_head_hcm">
+          <th onclick="sortTableAlphabetHCM(0)">
+            Thống kê theo quận/huyện <span><i class="fas fa-filter"></i></span>
+          </th>
+          <th onclick="sortTableNumHCM(1)">
+            Tổng số ca nhiễm <span><i class="fas fa-filter"></i></span>
+          </th>
+          <th onclick="sortTableNumHCM(2)">
+            Ca nhiễm hôm nay <span><i class="fas fa-filter"></i></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="covid_data_body_hcm"></tbody>
     </table>
     <h2 id="covid_by_day">Thống kê TP.HCM theo ngày</h2>
     <div id="customSelector2">
-        Chọn ngày cần xem
-        <select id="myInputHCMSub" oninput="myFunctionHCMSub()">
-            <option>All</option>
-        </select>
+      Chọn ngày cần xem
+      <select id="myInputHCMSub" oninput="myFunctionHCMSub()">
+        <option>All</option>
+      </select>
     </div>
 
     <div class="data_detail">
-
-        <table id="covid_data_table_hcm_sub">
-            <thead>
-                <tr id="covid_data_head_hcm_sub">
-
-
-                    <th onclick="sortTableTimeHCMAll(0)">Ngày thống kê <span><i class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumHCMSub(1)">Tổng ca nhiễm lũy kế <span><i class="fas fa-filter"></i></span>
-                    </th>
-
-                </tr>
-            </thead>
-            <tbody id="covid_data_body_hcm_sub"></tbody>
-
-        </table>
+      <table id="covid_data_table_hcm_sub">
+        <thead>
+          <tr id="covid_data_head_hcm_sub">
+            <th onclick="sortTableTimeHCMAll(0)">
+              Ngày thống kê <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumHCMSub(1)">
+              Tổng ca nhiễm lũy kế <span><i class="fas fa-filter"></i></span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="covid_data_body_hcm_sub"></tbody>
+      </table>
     </div>
 
+    
 
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
     <script type="application/javascript" src="index.js"></script>
 
     <!-- <script type="application/javascript" src="virus.js"></script> -->
-</body>
 
+    <script type="text/javascript">
+      var divElement = document.getElementById("viz1628217568889");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = "100%";
+        vizElement.style.height = "727px";
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = "100%";
+        vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+      } else {
+        vizElement.style.width = "100%";
+        vizElement.style.height = "1627px";
+      }
+      var scriptElement = document.createElement("script");
+      scriptElement.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+    <script type="text/javascript">
+      var divElement = document.getElementById("viz1628217722193");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.minWidth = "768px";
+        vizElement.style.maxWidth = "1920px";
+        vizElement.style.width = "100%";
+        vizElement.style.minHeight = "1051px";
+        vizElement.style.maxHeight = "1151px";
+        vizElement.style.height = divElement.offsetWidth * 1.2 + "px";
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.minWidth = "768px";
+        vizElement.style.maxWidth = "1920px";
+        vizElement.style.width = "100%";
+        vizElement.style.minHeight = "1051px";
+        vizElement.style.maxHeight = "1151px";
+        vizElement.style.height = divElement.offsetWidth * 1.2 + "px";
+      } else {
+        vizElement.style.width = "100%";
+        vizElement.style.height = "1727px";
+      }
+      var scriptElement = document.createElement("script");
+      scriptElement.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </body>
 </html>

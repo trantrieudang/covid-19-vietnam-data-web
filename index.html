@@ -1,157 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <!-- Thumbnail -->
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Pacifico&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Covid-19_TranTrieuDang_data">
-<meta property="og:description" content="Covid-19_TranTrieuDang_data...">
-<meta property="og:image" content="assets/images/ghen_co_vy_050420.png">
-<meta property="og:url" content="https://covid-19-trantrieudang.vercel.app/">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="icon" type="image/png" href="assets/images/virus1.png"/>    
-<title>Covid-19-TranTrieuDang</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Covid-19_TranTrieuDang_data" />
+    <meta property="og:description" content="Covid-19_TranTrieuDang_data..." />
+    <meta property="og:image" content="assets/images/ghen_co_vy_050420.png" />
+    <meta
+      property="og:url"
+      content="https://covid-19-trantrieudang.vercel.app/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="assets/images/virus1.png" />
+    <title>Covid-19-TranTrieuDang</title>
+  </head>
 
+  <body>
     <h1 id="author">Created by Trần Triều Dâng</h1>
-    <h1 id="total_vn">Số liệu covid Việt Nam </h1>
+    <h1 id="total_vn">Số liệu covid Việt Nam</h1>
     <!-- <div class="audio_container">
         <div class="song_title" id="song_title"><i class="fas fa-music"></i> ...Ghen Cô Vy... <i class="fas fa-music"></i></div>
         <audio  controls class="song" id="song" autoplay="true" loop="true" src="assets/music/song2.mp3"></audio>
     </div> -->
 
+    <span id="total_effect">
+      Tổng số ca nhiễm cả nước: <span id="total_effect_num"></span> ca
+    </span>
 
-    <span id="total_effect"> Tổng số ca nhiễm cả nước: <span
-            id="total_effect_num"></span> ca </span>
+    <span id="new_effect">
+      Tổng số ca nhiễm cả nước trong ngày:
+      <span id="new_effect_num"></span> ca</span
+    >
 
-    <span id="new_effect"> Tổng số ca nhiễm cả nước trong ngày: <span
-            id="new_effect_num"></span> ca</span>
+    <span id="total_treating">
+      Tổng số ca đang điều trị cả nước:
+      <span id="total_treating_num"></span> ca</span
+    >
 
-    <span id="total_treating"> Tổng số ca đang điều trị cả nước: <span
-            id="total_treating_num"></span> ca</span>
+    <span id="total_recovered">
+      Tổng số ca hồi phục cả nước:
+      <span id="total_recovered_num"></span> ca</span
+    >
 
-    <span id="total_recovered"> Tổng số ca hồi phục cả nước: <span
-            id="total_recovered_num"></span> ca</span>
+    <span id="total_death">
+      Tổng số ca tử vong lũy kế: <span id="death_num"></span> ca</span
+    >
 
-    <span id="total_death"> Tổng số ca tử vong lũy kế: <span id="death_num"></span> ca</span>
+    <span id="total_first_injection">
+      Tiêm liều 1: <span id="first_injection_num"></span> người</span
+    >
 
-    <span id="total_first_injection"> Tiêm liều 1: <span id="first_injection_num"></span>
-        người</span>
-
-    <span id="total_done_injection"> Tiêm đủ liều: <span id="done_injection_num"></span>
-        người</span>
+    <span id="total_done_injection">
+      Tiêm đủ liều: <span id="done_injection_num"></span> người</span
+    >
 
     <div id="special">
-        <i class="far fa-star"></i><a href="/hcm.html" id="special_title"> Tiêu điểm TPHCM <i class="far fa-hand-point-left"></i> Click me!!! </a><i
-            class="far fa-star"></i>
-
+      <i class="far fa-star"></i
+      ><a href="/hcm.html" id="special_title">
+        Tiêu điểm TPHCM <i class="far fa-hand-point-left"></i> Click me!!! </a
+      ><i class="far fa-star"></i>
     </div>
 
     <div id="total_daily_statics">
-        <i class="far fa-star"></i><a href="#covid_by_day" id="special_title"> Thống kê cả nước theo ngày <i class="far fa-hand-point-left"></i> Click me!!! </a><i
-            class="far fa-star"></i>
-
+      <i class="far fa-star"></i
+      ><a href="#covid_by_day" id="special_title">
+        Thống kê cả nước theo ngày <i class="far fa-hand-point-left"></i> Click
+        me!!! </a
+      ><i class="far fa-star"></i>
     </div>
 
     <div id="injectionProgress">
-        <i class="far fa-star"></i><a href="#covid_data_table_hcm_sub_vacxin" id="vacxin_title"> Kết quả tiêm chủng bên dưới <i class="far fa-hand-point-left"></i> Click me!!! </a><i
-            class="far fa-star"></i>
-
+      <i class="far fa-star"></i
+      ><a href="#covid_data_table_hcm_sub_vacxin" id="vacxin_title">
+        Kết quả tiêm chủng bên dưới <i class="far fa-hand-point-left"></i> Click
+        me!!! </a
+      ><i class="far fa-star"></i>
     </div>
 
-    
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Tìm kiếm theo tên thành phố/tỉnh..."
-        title="Type in a city/province">
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction()"
+      placeholder="Tìm kiếm theo tên thành phố/tỉnh..."
+      title="Type in a city/province"
+    />
     <table id="covid_data_table">
-        <thead>
-            <tr id="covid_data_head">
-                <!-- <th onclick="sortTableAlphabet(0)">Mã tỉnh/tp <span><i class="fas fa-filter"></i></span></th> -->
-                <th onclick="sortTableAlphabet(0)">Thống kê theo
-                    tỉnh thành <span><i class="fas fa-filter"></i></span></th>
-                <th onclick="sortTableNum(1)">Tổng số
-                    ca nhiễm lũy kế <span><i class="fas fa-filter"></i></span></th>
-                <th onclick="sortTableNum(2)">Ca nhiễm
-                    hôm nay <span><i class="fas fa-filter"></i></span></th>
-                <!-- <th onclick="sortTableNum(3)">Số ca tử vong lũy kế <span><i class="fas fa-filter"></i></span></th>
+      <thead>
+        <tr id="covid_data_head">
+          <!-- <th onclick="sortTableAlphabet(0)">Mã tỉnh/tp <span><i class="fas fa-filter"></i></span></th> -->
+          <th onclick="sortTableAlphabet(0)">
+            Thống kê theo tỉnh thành <span><i class="fas fa-filter"></i></span>
+          </th>
+          <th onclick="sortTableNum(1)">
+            Tổng số ca nhiễm lũy kế <span><i class="fas fa-filter"></i></span>
+          </th>
+          <th onclick="sortTableNum(2)">
+            Ca nhiễm hôm nay <span><i class="fas fa-filter"></i></span>
+          </th>
+          <!-- <th onclick="sortTableNum(3)">Số ca tử vong lũy kế <span><i class="fas fa-filter"></i></span></th>
                 <th onclick="sortTableNum(4)">Số ca bình phục lũy kế <span><i class="fas fa-filter"></i></span></th> -->
-
-            </tr>
-        </thead>
-        <tbody id="covid_data_body"></tbody>
+        </tr>
+      </thead>
+      <tbody id="covid_data_body"></tbody>
     </table>
-    
+
     <h2 id="covid_by_day">Thống kê cả nước theo ngày</h2>
-    
+
     <div id="customSelector">
-        Chọn ngày cần xem
-        
-        <select id="myInputSubAll" oninput="myInputSubAll()">
-            <option>All</option>
-        </select>
+      Chọn ngày cần xem
+
+      <select id="myInputSubAll" oninput="myInputSubAll()">
+        <option>All</option>
+      </select>
     </div>
 
     <div class="data_detail_all">
-
-        <table id="covid_data_table_all">
-            <thead>
-                <tr id="covid_data_head_all">
-
-
-                    <th onclick="sortTableTimeAll(0)">Ngày thống kê <span><i class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumAll(1)">Số ca nhiễm theo ngày <span><i class="fas fa-filter"></i></span>
-                    </th>
-                    <th onclick="sortTableNumAll(2)">Số ca hồi phục theo ngày <span><i class="fas fa-filter"></i></span>
-                    </th>
-                    <th onclick="sortTableNumAll(3)">Số ca tử vong theo ngày <span><i class="fas fa-filter"></i></span>
-                    </th>
-                </tr>
-            </thead>
-            <tbody id="covid_data_body_all"></tbody>
-
-        </table>
+      <table id="covid_data_table_all">
+        <thead>
+          <tr id="covid_data_head_all">
+            <th onclick="sortTableTimeAll(0)">
+              Ngày thống kê <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumAll(1)">
+              Số ca nhiễm theo ngày <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumAll(2)">
+              Số ca hồi phục theo ngày
+              <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumAll(3)">
+              Số ca tử vong theo ngày <span><i class="fas fa-filter"></i></span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="covid_data_body_all"></tbody>
+      </table>
     </div>
-   
+
     <h2 class="vacxin_title" id="vacxin_title">Kết quả tiêm chủng</h2>
-    
-    <input type="text" id="myInputHCMSubVac" onkeyup="myFunctionHCMSubVac()"
-        placeholder="Tìm kiếm theo tên thành phố/tỉnh..." title="Type in a city/province">
+
+    <input
+      type="text"
+      id="myInputHCMSubVac"
+      onkeyup="myFunctionHCMSubVac()"
+      placeholder="Tìm kiếm theo tên thành phố/tỉnh..."
+      title="Type in a city/province"
+    />
     <div class="vacxin">
-
-        <table id="covid_data_table_hcm_sub_vacxin">
-            <thead>
-                <tr id="covid_data_head_hcm_sub_vacxin">
-
-                    <th onclick="sortTableAlphabetHCMVac(0)">Tỉnh thành <span><i class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumHCMVac(1)">Tiêm mũi 1 <span><i class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumHCMVacPercentage(2)">Tiêm mũi 1 (% dân số) <span><i
-                                class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumHCMVac(3)">Tiêm đủ liều <span><i class="fas fa-filter"></i></span></th>
-                    <th onclick="sortTableNumHCMVacPercentage(4)">Tiêm đủ liều (% dân số) <span><i
-                                class="fas fa-filter"></i></span></th>
-                </tr>
-            </thead>
-            <tbody id="covid_data_body_hcm_sub_vacxin"></tbody>
-
-        </table>
+      <table id="covid_data_table_hcm_sub_vacxin">
+        <thead>
+          <tr id="covid_data_head_hcm_sub_vacxin">
+            <th onclick="sortTableAlphabetHCMVac(0)">
+              Tỉnh thành <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumHCMVac(1)">
+              Tiêm mũi 1 <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumHCMVacPercentage(2)">
+              Tiêm mũi 1 (% dân số) <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumHCMVac(3)">
+              Tiêm đủ liều <span><i class="fas fa-filter"></i></span>
+            </th>
+            <th onclick="sortTableNumHCMVacPercentage(4)">
+              Tiêm đủ liều (% dân số) <span><i class="fas fa-filter"></i></span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="covid_data_body_hcm_sub_vacxin"></tbody>
+      </table>
     </div>
 
-
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-<script type="application/javascript" src="index.js"></script>
-<!-- <script type="application/javascript" src="virus.js"></script> -->
     
-</body>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/javascript" src="index.js"></script>
+    <!-- <script type="application/javascript" src="virus.js"></script> -->
+   
+  </body>
 </html>
