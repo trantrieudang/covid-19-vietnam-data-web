@@ -43,6 +43,9 @@
       property="og:url"
       content="https://covid-19-trantrieudang.vercel.app/"
     />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -210,15 +213,26 @@
       </table>
     </div>
 
-    
+    <a data-scroll class="backToTop" href="#" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
-    <script type="application/javascript" src="index.js"></script>
-    <!-- <script type="application/javascript" src="virus.js"></script> -->
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.js"></script>
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js"></script>
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]',{
+        speed: 100,
+        speedAsDuration: true
+      });
+    </script>
    
   </body>
 </html>

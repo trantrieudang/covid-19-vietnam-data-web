@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500;700;800;900&display=swap"
       rel="stylesheet"
@@ -75,7 +77,7 @@
       <canvas id="myChart"></canvas>
     </div>
 
-    <div
+    <!-- <div
       class="tableauPlaceholder"
       id="viz1628217568889"
       style="position: relative"
@@ -139,7 +141,7 @@
       </object>
     </div>
     <br/>
-    <br/>
+    <br/> -->
     <a id="click_me_hcm" href="#myInputHCMSub"
       >Detail số liệu từ 29/04 bên dưới nhé :)
       <i class="far fa-hand-point-left"></i> Click me!!!</a
@@ -192,7 +194,9 @@
         <tbody id="covid_data_body_hcm_sub"></tbody>
       </table>
     </div>
-
+    <a data-scroll class="backToTop" href="#" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
     
 
     <script
@@ -203,54 +207,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-    <script type="application/javascript" src="index.js"></script>
-
-    <!-- <script type="application/javascript" src="virus.js"></script> -->
-
-    <script type="text/javascript">
-      var divElement = document.getElementById("viz1628217568889");
-      var vizElement = divElement.getElementsByTagName("object")[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.width = "100%";
-        vizElement.style.height = "727px";
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = "100%";
-        vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-      } else {
-        vizElement.style.width = "100%";
-        vizElement.style.height = "1627px";
-      }
-      var scriptElement = document.createElement("script");
-      scriptElement.src =
-        "https://public.tableau.com/javascripts/api/viz_v1.js";
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-
-    <script type="text/javascript">
-      var divElement = document.getElementById("viz1628217722193");
-      var vizElement = divElement.getElementsByTagName("object")[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.minWidth = "768px";
-        vizElement.style.maxWidth = "1920px";
-        vizElement.style.width = "100%";
-        vizElement.style.minHeight = "1051px";
-        vizElement.style.maxHeight = "1151px";
-        vizElement.style.height = divElement.offsetWidth * 1.2 + "px";
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.minWidth = "768px";
-        vizElement.style.maxWidth = "1920px";
-        vizElement.style.width = "100%";
-        vizElement.style.minHeight = "1051px";
-        vizElement.style.maxHeight = "1151px";
-        vizElement.style.height = divElement.offsetWidth * 1.2 + "px";
-      } else {
-        vizElement.style.width = "100%";
-        vizElement.style.height = "1727px";
-      }
-      var scriptElement = document.createElement("script");
-      scriptElement.src =
-        "https://public.tableau.com/javascripts/api/viz_v1.js";
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.js"></script>
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js"></script>
+    <script src="./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]',{
+        speed: 100,
+        speedAsDuration: true
+      });
     </script>
   </body>
 </html>

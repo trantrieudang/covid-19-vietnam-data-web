@@ -1,76 +1,17 @@
-// fetch("https://tuoitre.io/covid-mix")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     if (data !== undefined || data !== null) {
-//       let data_1 = data[0][2].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//       // let data_2 = data[0][3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//       document.getElementById("total_effect_num").innerHTML = data_1;
-//       let newArr1 = data.map((obj) => Object.values(obj));
-//       let newArr2 = newArr1.sort((a, b) => b[3] - a[3]);
-//       // console.log(newArr2);
-//       let sum = 0;
-//       for (let i = 0; i < newArr2.length; i++) {
-//         sum += Number(newArr2[i + 2][3]);
-//         document.getElementById("new_effect_num").innerHTML = sum
-//           .toString()
-//           .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//         const contentHTML = `
-//         <tr>
-
-//             <td>
-//                 ${newArr2[i + 2][1]}
-//             </td>
-//             <td id="data_1">
-//                 ${newArr2[i + 2][2]
-//                   .toString()
-//                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-//             </td>
-//             <td id="data_2">
-//                 ${newArr2[i + 2][3]
-//                   .toString()
-//                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-//             </td>
-
-//         </tr>
-//       `;
-
-//         document.getElementById("covid_data_body").innerHTML += contentHTML;
-//       }
-//     }
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
-const options = {
+fetch("https://emag.thanhnien.vn/covid19/home/getAllPatientProvinces", {
   method: "POST",
   body: JSON.stringify(),
-};
-
-fetch("https://emag.thanhnien.vn/covid19/home/getAllPatientProvinces", options)
+})
   .then((response) => response.json())
   .then((data) => {
     if (data != null || data != undefined) {
       const { list } = data;
-      // console.log(list);
-      let newArr = list.map((obj) => Object.values(obj));
-      // console.log(newArr);
 
-      // let sumAccumulated = 0;
-      // let deathAccumulated = 0;
+      let newArr = list.map((obj) => Object.values(obj));
+
       let firstInjectionAccumulated = 0;
       let fullInjectionAccumulated = 0;
       for (let i = 0; i < newArr.length; i++) {
-        // sumAccumulated += Number(newArr[i][4]);
-        // document.getElementById("total_effect_num").innerHTML = sumAccumulated
-        //   .toString()
-        //   .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        // deathAccumulated += Number(newArr[i][7]);
-        // document.getElementById("death_num").innerHTML = deathAccumulated
-        //   .toString()
-        //   .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
         firstInjectionAccumulated += Number(newArr[i][9]);
         document.getElementById("first_injection_num").innerHTML =
           firstInjectionAccumulated
@@ -211,8 +152,10 @@ fetch(
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       const labelArr = newArr.map((item) => {
-        const options = { month: "short", day: "numeric" };
-        return new Date(item[11]).toLocaleDateString("vi-VN", options);
+        return new Date(item[11]).toLocaleDateString("vi-VN", {
+          month: "short",
+          day: "numeric",
+        });
       });
       const dataArr = newArr.map((item) => item[25]);
       // let minShow = Math.floor(
@@ -227,7 +170,7 @@ fetch(
 
       let ctx = document.getElementById("myChart");
       ctx.height = 200;
-      Chart.defaults.font.family = "Arima Madurai";
+      Chart.defaults.font.family = "Nunito Sans";
       let myChart = new Chart(ctx, {
         plugins: [ChartDataLabels],
         type: "bar",
@@ -251,7 +194,7 @@ fetch(
                 font: {
                   size: 12,
                   weight: "bold",
-                  family: "Arima Madurai",
+                  family: "Nunito Sans",
                 },
               },
             },
@@ -1403,8 +1346,14 @@ function sortTableTimeHCMAll(n) {
       pause: 750,
       size: 10,
     });
-
-  /*window.setTimeout(function() {
-    $("#main").sparkle("destroy");
-  }, 21000);*/
 })(jQuery, window, document);
+
+const toTop = document.querySelector(".backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+});
