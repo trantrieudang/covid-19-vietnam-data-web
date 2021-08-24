@@ -84,7 +84,13 @@ fetch("https://emag.thanhnien.vn/covid19/home/getAllPatientProvinces", {
   .catch((err) => console.log(err));
 
 fetch(
-  "https://bando.tphcm.gov.vn/service/ogis/dashboard/data?path=data/baocaocovid19/baocaodieutriquanhuyen"
+  "https://bando.tphcm.gov.vn/service/ogis/dashboard/data?path=data/baocaocovid19/baocaodieutriquanhuyen",
+  {
+    headers: {
+      Authorization:
+        "bearer 9QZctbLajaMJtONgg9I9_tlMdphZ7Tpq1swVdUuCTiMOKq_dLrxututTS-bF0VdBDGoPZ-H3-x8KqVL-GrQCMhGRDyQdtvrFujX7i5Z6oFmMyC3sUAgpWbUA4hcz1IYYxzGOBhVYG_vOZjbDv8lHHhqJhpdU5hH_1FcYNw3xjkp07EInwpdtZQlfrXOc2AYdVgo1jVhmUTXCNfevnFCug7p4cc53pRf4onk6uZRifsGD_RFcy7Qmq4uci6CI1qF62pvnMqxqOkPa0oavPwBhZBnesQ30NKZM9ctBO1xzoCv3ph-dT91LIH7I2cgF2hcD_9OXKRa7ZFvH682A-Py9sfdpiCYR_jZkWlKmX0FVkiSMn-IOyt8HX53-5MJUrk568XQXghqPORlC0vVvhUSgGfIgN8D1GywtsZUBhXxXn7jFo50HvAZxVJoLnV_Judb-uF0KlQ",
+    },
+  }
 )
   .then((response) => response.json())
   .then((data) => {
@@ -129,7 +135,13 @@ fetch(
   .catch((err) => console.log(err));
 
 fetch(
-  "https://bando.tphcm.gov.vn/service/ogis/dashboard/data?path=data/baocaocovid19/thanhphohochiminh"
+  "https://bando.tphcm.gov.vn/service/ogis/dashboard/data?path=data/baocaocovid19/thanhphohochiminh",
+  {
+    headers: {
+      Authorization:
+        "bearer 9QZctbLajaMJtONgg9I9_tlMdphZ7Tpq1swVdUuCTiMOKq_dLrxututTS-bF0VdBDGoPZ-H3-x8KqVL-GrQCMhGRDyQdtvrFujX7i5Z6oFmMyC3sUAgpWbUA4hcz1IYYxzGOBhVYG_vOZjbDv8lHHhqJhpdU5hH_1FcYNw3xjkp07EInwpdtZQlfrXOc2AYdVgo1jVhmUTXCNfevnFCug7p4cc53pRf4onk6uZRifsGD_RFcy7Qmq4uci6CI1qF62pvnMqxqOkPa0oavPwBhZBnesQ30NKZM9ctBO1xzoCv3ph-dT91LIH7I2cgF2hcD_9OXKRa7ZFvH682A-Py9sfdpiCYR_jZkWlKmX0FVkiSMn-IOyt8HX53-5MJUrk568XQXghqPORlC0vVvhUSgGfIgN8D1GywtsZUBhXxXn7jFo50HvAZxVJoLnV_Judb-uF0KlQ",
+    },
+  }
 )
   .then((response) => response.json())
   .then((data) => {
