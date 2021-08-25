@@ -169,19 +169,10 @@ fetch(
           day: "numeric",
         });
       });
-      const dataArr = newArr.map((item) => item[25]);
-      // let minShow = Math.floor(
-      //   (new Date().getTime() - new Date("2021/04/29").getTime()) /
-      //     (1000 * 60 * 60 * 24)
-      // );
-      // console.log(new Date().getTime());
-      // console.log(new Date("2021/04/29").getTime());
-      // console.log(minShow);
-
-      // console.log(dataArr.length);
+      const dataArr = newArr.map((item) => item[24]);
 
       let ctx = document.getElementById("myChart");
-      ctx.height = 200;
+      ctx.height = 190;
       Chart.defaults.font.family = "Nunito Sans";
       let myChart = new Chart(ctx, {
         plugins: [ChartDataLabels],
@@ -192,19 +183,21 @@ fetch(
             {
               label: "số ca",
               data: dataArr,
-              backgroundColor: ["rgba(121, 226, 203, 0.8)"],
+              backgroundColor: ["rgba(209, 99, 71,1)"],
               borderColor: ["rgba(255, 99, 132, 0)"],
               borderWidth: 0.5,
-              datalabels: {
-                color: "red",
 
+              datalabels: {
+                color: "black",
+                display: "auto",
+                align: "start",
+                backgroundColor: ["rgba(255, 255, 255,1)"],
                 clip: true,
+                offset: 2,
 
                 padding: "2",
-                align: "start",
-                backgroundColor: "yellow",
                 font: {
-                  size: 12,
+                  size: 9,
                   weight: "bold",
                   family: "Nunito Sans",
                 },
@@ -217,9 +210,9 @@ fetch(
           plugins: {
             title: {
               display: true,
-              text: "Số ca covid-19 tại TP.HCM 7 ngày vừa qua",
+              text: "Số ca nhiễm theo ngày",
               font: {
-                size: 16,
+                size: 12,
               },
             },
           },
@@ -228,8 +221,12 @@ fetch(
             y: {
               beginAtZero: true,
             },
+
             x: {
-              min: dataArr.length - 7,
+              ticks: {
+                maxTicksLimit: 10,
+              },
+              min: dataArr.length - 15,
             },
           },
         },
@@ -272,6 +269,11 @@ fetch(
             </td>
             <td > 
                 ${newArrDesc[i][25]
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </td>
+            <td > 
+                ${newArrDesc[i][24]
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
