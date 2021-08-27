@@ -94,9 +94,8 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data);
-
     if (data !== undefined || data !== null) {
+      console.log(data);
       let arr = data.map((obj) => Object.values(obj));
       console.log(arr);
       let arr2 = arr.sort((a, b) => b[24] - a[24]);
@@ -112,19 +111,60 @@ fetch(
              .replaceAll("[", "")
              .replaceAll("]", "")}
         </td>
-        <td id="data_1">
+        <td>
         ${arr2[i][25]
           .toString()
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
-        <td id="data_2">
+        <td >
         ${arr2[i][24]
           .toString()
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
-        
+        <td >
+        ${arr2[i][15]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td >
+        ${arr2[i][14]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td >
+        ${arr2[i][17]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td >
+        ${arr2[i][16]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td >
+        ${arr2[i][21]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td >
+        ${arr2[i][20]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td>
+        ${arr2[i][18]
+          .toString()
+          .trim()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
         
     </tr>`;
 
@@ -147,8 +187,9 @@ fetch(
   .then((data) => {
     // console.log(data);
     if (data !== undefined || data !== null) {
+      console.log(data);
       let arr = data.map((obj) => Object.values(obj));
-
+      console.log(arr);
       const newArr = arr.sort((a, b) => new Date(a[11]) - new Date(b[11]));
       // console.log(newArr);
       let index = newArr.length - 1;
@@ -172,10 +213,10 @@ fetch(
       const dataArr = newArr.map((item) => item[24]);
 
       let ctx = document.getElementById("myChart");
-      ctx.height = 190;
+      ctx.height = 200;
       Chart.defaults.font.family = "Nunito Sans";
       let myChart = new Chart(ctx, {
-        plugins: [ChartDataLabels],
+        // plugins: [ChartDataLabels],
         type: "bar",
         data: {
           labels: labelArr,
@@ -191,11 +232,11 @@ fetch(
                 color: "black",
                 display: "auto",
                 align: "start",
-                backgroundColor: ["rgba(255, 255, 255,1)"],
+                // backgroundColor: ["rgba(255, 255, 255,1)"],
                 clip: true,
                 offset: 2,
 
-                padding: "2",
+                padding: "0",
                 font: {
                   size: 9,
                   weight: "bold",
@@ -226,7 +267,84 @@ fetch(
               ticks: {
                 maxTicksLimit: 10,
               },
-              min: dataArr.length - 15,
+              min: dataArr.length - 100,
+            },
+          },
+        },
+        animations: {
+          tension: {
+            duration: 1000,
+            easing: "linear",
+            from: 1,
+            to: 0,
+            loop: true,
+          },
+        },
+      });
+      const dataArr2 = newArr.map((item) => item[25]);
+      let ctx2 = document.getElementById("myChart2");
+      ctx2.height = 200;
+      Chart.defaults.font.family = "Nunito Sans";
+      let myChart2 = new Chart(ctx2, {
+        // plugins: [ChartDataLabels],
+        type: "line",
+        data: {
+          labels: labelArr,
+
+          datasets: [
+            {
+              label: "số ca",
+              data: dataArr2,
+              backgroundColor: ["rgba(75, 192, 192,1)"],
+
+              datalabels: {
+                // color: "black",
+                // display: "auto",
+                // align: "start",
+                // // backgroundColor: ["rgba(255, 255, 255,1)"],
+                // clip: true,
+                // offset: 2,
+                // padding: "0",
+                // font: {
+                //   size: 9,
+                //   weight: "bold",
+                //   family: "Nunito Sans",
+                // },
+              },
+            },
+          ],
+        },
+
+        options: {
+          elements: {
+            line: {
+              backgroundColor: "rgba(75, 192, 192,0.5)",
+              fill: true,
+            },
+            point: {
+              radius: 0,
+            },
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: "Số ca nhiễm lũy kế",
+              font: {
+                size: 12,
+              },
+            },
+          },
+
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+
+            x: {
+              ticks: {
+                maxTicksLimit: 10,
+              },
+              min: dataArr2.length - 100,
             },
           },
         },
@@ -277,6 +395,36 @@ fetch(
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
+            <td > 
+                ${newArrDesc[i][17]
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </td>
+            <td > 
+                ${newArrDesc[i][16]
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </td>
+            <td > 
+                ${newArrDesc[i][32]
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </td>
+            <td > 
+                ${newArrDesc[i][31]
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </td>
+            <td > 
+            ${newArrDesc[i][30]
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
+        <td > 
+            ${newArrDesc[i][18]
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </td>
             </tr>
         `;
         document.getElementById("covid_data_body_hcm_sub").innerHTML += y;

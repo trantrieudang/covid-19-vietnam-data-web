@@ -924,30 +924,30 @@ body {
 }
 @media only screen and (max-width: 321px) {
   #covid_data_table {
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
   }
 
   #covid_data_table_hcm {
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
   }
   #covid_data_table_hcm_vacxin {
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
   }
   #covid_data_table_hcm_sub {
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
   }
   #covid_data_table_all {
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
   }
 
   #covid_data_table_hcm_sub_vacxin {
     
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
   }
   .backToTop{
