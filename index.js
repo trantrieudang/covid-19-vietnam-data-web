@@ -123,18 +123,7 @@ fetch(
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
-        <td >
-        ${arr2[i][15]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
-        <td >
-        ${arr2[i][14]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
+       
         <td >
         ${arr2[i][17]
           .toString()
@@ -147,18 +136,7 @@ fetch(
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
-        <td >
-        ${arr2[i][21]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
-        <td >
-        ${arr2[i][20]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
+       
         <td>
         ${arr2[i][18]
           .toString()
@@ -405,26 +383,13 @@ fetch(
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
-            <td > 
-                ${newArrDesc[i][32]
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </td>
-            <td > 
-                ${newArrDesc[i][31]
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </td>
+            
             <td > 
             ${newArrDesc[i][30]
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
-        <td > 
-            ${newArrDesc[i][18]
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
+       
             </tr>
         `;
         document.getElementById("covid_data_body_hcm_sub").innerHTML += y;
