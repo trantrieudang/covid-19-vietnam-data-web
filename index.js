@@ -112,37 +112,19 @@ fetch(
              .replaceAll("]", "")}
         </td>
         <td>
-        ${arr2[i][25]
+        ${arr2[i][27]
           .toString()
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
         <td >
-        ${arr2[i][24]
+        ${arr2[i][26]
           .toString()
           .trim()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </td>
        
-        <td >
-        ${arr2[i][17]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
-        <td >
-        ${arr2[i][16]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
        
-        <td>
-        ${arr2[i][18]
-          .toString()
-          .trim()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
         
     </tr>`;
 
@@ -188,7 +170,7 @@ fetch(
           day: "numeric",
         });
       });
-      const dataArr = newArr.map((item) => item[24]);
+      const dataArr = newArr.map((item) => item[28]);
 
       let ctx = document.getElementById("myChart");
       ctx.height = 200;
@@ -259,7 +241,7 @@ fetch(
           },
         },
       });
-      const dataArr2 = newArr.map((item) => item[25]);
+      const dataArr2 = newArr.map((item) => item[29]);
       let ctx2 = document.getElementById("myChart2");
       ctx2.height = 200;
       Chart.defaults.font.family = "Nunito Sans";
@@ -364,31 +346,16 @@ fetch(
                 )}
             </td>
             <td > 
-                ${newArrDesc[i][25]
+                ${newArrDesc[i][29]
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
             <td > 
-                ${newArrDesc[i][24]
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </td>
-            <td > 
-                ${newArrDesc[i][17]
-                  .toString()
-                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </td>
-            <td > 
-                ${newArrDesc[i][16]
+                ${newArrDesc[i][28]
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </td>
             
-            <td > 
-            ${newArrDesc[i][30]
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-        </td>
        
             </tr>
         `;
